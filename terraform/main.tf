@@ -1,7 +1,4 @@
-resource "aws_s3_bucket" "tf_state" {
-  bucket        = "terraform-state-bucket-api-1234"
-  force_destroy = true
-}
+
 
 data "aws_ami" "ubuntu" {
 
