@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<input id="name" placeholder="Name">
+
+<button onclick="createUser()">
+Create User
+</button>
+
+<script>
+async function createUser() {
+
+  const name =
+    document.getElementById("name").value;
+
+  await fetch("/users", {
+    method: "POST",
+    headers: {
+      "Content-Type":"application/json"
+    },
+    body: JSON.stringify({name})
+  });
+
+  alert("User created");
+}
+</script>
+
+</body>
+</html>
