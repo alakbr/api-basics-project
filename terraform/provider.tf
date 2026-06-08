@@ -1,20 +1,14 @@
 terraform {
-
   required_providers {
-
     aws = {
-
       source = "hashicorp/aws"
-
       version = "~> 5.0"
 
     }
-
   }
-
   backend "s3" {
     bucket         = "terraform-state-bucket-api-1234" # Change this to your unique bucket name
-    key            = "api-terraform.tfstate"
+    key            = "/"
     region         = "us-east-1" # Change this to your desired region
     encrypt        = true
 
@@ -23,7 +17,6 @@ terraform {
 }
 
 provider "aws" {
-
   region = var.region
 
 }
