@@ -3,23 +3,18 @@
 set -e
 
 apt-get update -y
-
 apt-get install -y git curl
 
-curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash -
-
+curl -fsSL https://deb.nodesource.com/setup_20.x | bash -
 apt-get install -y nodejs
 
-# App directory
-APP_DIR="/home/ubuntu/app"
-
-mkdir -p $APP_DIR
-cd $APP_DIR
-
-# Clean old clone if exists (important for reboots)
-rm -rf $APP_DIR/*
+mkdir -p /home/ubuntu/app
+cd /home/ubuntu/app
 
 git clone https://github.com/alakbr/api-basics-project.git .
+
+# 👇 IMPORTANT FIX
+cd app
 
 npm install
 
