@@ -13,7 +13,6 @@ cd /home/ubuntu/app
 
 git clone https://github.com/alakbr/api-basics-project.git .
 
-# 👇 IMPORTANT FIX
 cd app
 
 npm install
